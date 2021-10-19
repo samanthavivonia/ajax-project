@@ -1,0 +1,245 @@
+.hidden {
+  display: none;
+}
+
+body {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+header {
+  border-bottom: 2px solid lightgray;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 65px;
+}
+
+.nav-items {
+  display: flex;
+  align-items: center;
+  font-size: 1.2em;
+}
+
+.nav-item {
+  margin: 0 0.5em;
+  cursor: pointer;
+}
+
+.nav-item.active {
+  font-weight: 600;
+  color: #248a6f;
+}
+
+.logo {
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
+section {
+  padding: 50px 0;
+  border-bottom: 2px solid lightgray;
+}
+
+.search-with-button {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+h1 {
+  margin-bottom: 30px;
+}
+
+input.search {
+  width: calc(100% - 100px);
+  margin-right: 20px;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid black;
+}
+
+input.search:focus,
+input.search:active {
+  border-bottom: 1px solid #248a6f;
+}
+
+button {
+  font-weight: 600;
+  font-size: 1em;
+  border-radius: 100px;
+  padding: 5px 10px;
+  min-width: 100px;
+  transition: 150ms;
+}
+
+button.full-width {
+  display: block;
+  width: 100%;
+}
+
+button.primary {
+  background-color: #248a6f;
+  border: 1px solid #248a6f;
+  color: white;
+}
+
+button.outline {
+  background-color: white;
+  color: #248a6f;
+  border: 1px solid #248a6f;
+}
+
+button.link {
+  background-color: white;
+  color: #248a6f;
+  border: 1px solid white;
+}
+
+button i {
+  margin-right: 5px;
+}
+
+div.dropdown {
+  display: inline;
+}
+
+button.filter {
+  background-color: white;
+  color: black;
+  border: 1px solid #b2b2b2;
+  border-radius: 100px;
+  font-size: 1em;
+}
+
+button.filter i {
+  color: #19614e;
+}
+
+button.filter:hover {
+  background-color: #f7fdfb;
+  color: #19614e;
+}
+
+button.filter:focus,
+button.filter:focus {
+  box-shadow: none;
+  border: 1px solid #19614e;
+  color: #19614e;
+}
+
+button.upload {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.filters {
+  margin-bottom: 30px;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  width: 100%;
+  overflow: auto;
+}
+
+.filters::-webkit-scrollbar {
+  display: none;
+}
+
+.dropdown-menu {
+  width: 200px;
+  padding: 10px;
+  border: 1px solid #b2b2b2;
+  color: black;
+}
+
+.dropdown-menu li:hover,
+.dropdown-menu .form-check-input:hover {
+  cursor: pointer;
+}
+
+.form-check-input:focus,
+.form-check-input:active {
+  box-shadow: none;
+  border: 1px solid #19614e;
+}
+
+.form-check-input:checked {
+    background-color: #248a6f;
+    border-color: #19614e;
+}
+
+.dropdown-menu i {
+  font-size: 1.4em;
+}
+
+.dropdown-menu i.disabled {
+   color: #b2b2b2;
+}
+
+.slider-with-labels {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+button.clear-filters {
+  display: flex;
+  align-items: center;
+  color: #b2b2b2;
+}
+
+button.clear-filters:hover {
+  color: #248a6f;
+}
+
+.card-deck {
+ display: flex;
+ flex-wrap: wrap;
+ gap: 20px 20px;
+}
+
+.item-card {
+  flex-grow: 1;
+}
+
+img {
+  width: 100%;
+  border-radius: 7px;
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+select.form-select {
+  border-radius: 0;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid black;
+}
+
+.form-control:focus,
+.form-select:focus {
+  box-shadow: none;
+  border-bottom: 1px solid #19614e;
+}
+
+i.disabled {
+  color: #b2b2b2;
+}
+
+form {
+  max-width: 30rem;
+}
+
+.read.label {
+  color: #b2b2b2;
+}
+
+.read.input,
+div.read.input.slider-with-labels,
+.read.input i,
+.read.input input[type="range"] {
+  color: black;
+}

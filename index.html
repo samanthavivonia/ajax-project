@@ -5,15 +5,729 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AJAX Project</title>
   <link rel="icon" href="images/favicon.ico">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="fonts/Font Awesome 5 Brands-Regular-400.otf">
+  <link rel="stylesheet" href="fonts/Font Awesome 5 Duotone-Solid-900.otf">
+  <link rel="stylesheet" href="fonts/Font Awesome 5 Pro-Light-300.otf">
+  <link rel="stylesheet" href="fonts/Font Awesome 5 Pro-Regular-400.otf">
+  <link rel="stylesheet" href="fonts/Font Awesome 5 Pro-Solid-900.otf">
 </head>
 <body>
   <header>
+    <div class="header container">
+      <div class="logo">Wardrobe Planner</div>
+      <div class="nav-items">
+        <div class="nav-item active search-items">Search Items</div>
+        <div class="nav-item inactive search-outfits">Search Outfits</div>
+        <div class="nav-item inactive history">History</div>
+        <div class="nav-item inactive analytics">Analytics</div>
+        <div class="nav-item inactive hamburger hidden"><i class="fas fa-bars"></i></div>
+      </div>
+    </div>
   </header>
   <main>
+
+    <!-- ITEM INDEX -->
+
+      <section class="item-index">
+        <div class="container">
+
+          <!-- Page Top -->
+
+          <h1>Search Items</h1>
+
+          <div class="search-with-button">
+            <input type="text" class="search" id="search-items" name="search-items" placeholder="Search..."
+              aria-label="Search wardrobe items">
+            <button type="button" class="primary"><i class="fas fa-plus"></i> New</button>
+          </div>
+
+          <!-- Filters -->
+
+          <div class="filters">
+
+            <div class="dropdown">
+              <button class="btn filter dropdown-toggle" type="button" id="filter-items-type" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Type
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+
+                <li>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="filter-items-type-top">
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Top
+                    </label>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="filter-items-type-bottom">
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Bottom
+                    </label>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="filter-items-type-jacket">
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Jacket
+                    </label>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="filter-items-type-shoes">
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Shoes
+                    </label>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="filter-items-type-accessory">
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Accessory
+                    </label>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="dropdown">
+              <button class="btn filter dropdown-toggle" type="button" id="filter-items-weather" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Weather
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li class="slider-filter">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="filter-items-weather-slider">
+                    <div class="slider-with-labels">
+                      <i class="fas fa-sun disabled"></i>
+                      <input type="range" class="form-range" id="" disabled>
+                      <i class="fas fa-snowflake disabled"></i>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="dropdown">
+              <button class="btn filter dropdown-toggle" type="button" id="filter-items-formality" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Formality
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li class="slider-filter">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="filter-items-formality-slider">
+                    <div class="slider-with-labels">
+                      <i class="fas fa-tshirt disabled"></i>
+                      <input type="range" class="form-range" id="" disabled>
+                      <i class="fas fa-crown disabled"></i>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="dropdown">
+              <button class="btn filter dropdown-toggle" type="button" id="filter-items-comfort" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Comfort
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li class="slider-filter">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="filter-items-comfort-slider">
+                    <div class="slider-with-labels">
+                      <i class="fas fa-sheep disabled"></i>
+                      <input type="range" class="form-range" id="" disabled>
+                      <i class="fas fa-band-aid disabled"></i>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="dropdown">
+              <button class="btn filter dropdown-toggle" type="button" id="filter-items-tones" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Tones
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+
+                <li>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="filter-items-tones-warm">
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Warm
+                    </label>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="filter-items-tones-cool">
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Cool
+                    </label>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="filter-items-tones-muted">
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Muted
+                    </label>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="filter-items-tones-bright">
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Bright
+                    </label>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="filter-items-tones-grayscale">
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Grayscale
+                    </label>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="dropdown">
+              <button class="btn filter dropdown-toggle" type="button" id="filter-items-pockets" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Pockets
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+
+                <li>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="filter-items-pockets-haspockets">
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Has Pockets
+                    </label>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <button type="button" class="link clear-filters"><i class="fas fa-times"></i>Clear Filters</button>
+
+          </div>
+
+          <!-- Cards -->
+
+          <div class="card-deck">
+
+            <div class="item-card col-xs-12 col-s-6 col-md-4 col-lg-3 col-xl-2">
+              <img class="cover-img" src="https://picsum.photos/300/150?random=1" alt="">
+              <h3>[Item Name]</h3>
+              <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+              aliqua.</p> -->
+            </div>
+
+            <div class="item-card col-xs-12 col-s-6 col-md-4 col-lg-3 col-xl-2">
+              <img class="cover-img" src="https://picsum.photos/300/150?random=2" alt="">
+              <h3>[Item Name]</h3>
+              <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                aliqua.</p> -->
+            </div>
+
+            <div class="item-card col-xs-12 col-s-6 col-md-4 col-lg-3 col-xl-2">
+              <img class="cover-img" src="https://picsum.photos/300/150?random=3" alt="">
+              <h3>[Item Name]</h3>
+              <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                aliqua.</p> -->
+            </div>
+
+            <div class="item-card col-xs-12 col-s-6 col-md-4 col-lg-3 col-xl-2">
+              <img class="cover-img" src="https://picsum.photos/300/150?random=4" alt="">
+              <h3>[Item Name]</h3>
+              <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                aliqua.</p> -->
+            </div>
+
+            <div class="item-card col-xs-12 col-s-6 col-md-4 col-lg-3 col-xl-2">
+              <img class="cover-img" src="https://picsum.photos/300/150?random=5" alt="">
+              <h3>[Item Name]</h3>
+              <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                aliqua.</p> -->
+            </div>
+
+            <div class="item-card col-xs-12 col-s-6 col-md-4 col-lg-3 col-xl-2">
+              <img class="cover-img" src="https://picsum.photos/300/150?random=6" alt="">
+              <h3>[Item Name]</h3>
+              <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                aliqua.</p> -->
+            </div>
+
+            <div class="item-card col-xs-12 col-s-6 col-md-4 col-lg-3 col-xl-2">
+              <img class="cover-img" src="https://picsum.photos/300/150?random=7" alt="">
+              <h3>[Item Name]</h3>
+              <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                aliqua.</p> -->
+            </div>
+
+            <div class="item-card col-xs-12 col-s-6 col-md-4 col-lg-3 col-xl-2">
+              <img class="cover-img" src="https://picsum.photos/300/150?random=8" alt="">
+              <h3>[Item Name]</h3>
+              <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                aliqua.</p> -->
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+    <!-- ITEM CREATE -->
+
+      <section class="item-create">
+        <div class="container">
+          <h1>Create Item</h1>
+          <div class="row">
+
+            <div class="col-md-3 col-sm-12">
+              <img src="https://picsum.photos/seed/picsum/300/300" alt="">
+              <button class="outline upload"><i class="fas fa-upload"></i> Upload</button>
+            </div>
+
+            <div class="col-md-9 col-sm-12">
+              <form>
+
+                <div class="mb-3">
+                  <label for="item-name" class="form-label">Name</label>
+                  <input type="text" class="form-control" id="create-item-name" aria-describedby="item-name" placeholder="Item Name...">
+                </div>
+
+                <div class="mb-3">
+                  <label for="item-type" class="form-label">Type</label>
+                  <select name="item-type" id="create-item-type" class="form-select" aria-label="Item Type">
+                    <option selected>Choose item type...</option>
+                    <option value="top">Top</option>
+                    <option value="bottom">Bottom</option>
+                    <option value="jacket">Jacket</option>
+                    <option value="shoes">Shoes</option>
+                    <option value="accessory">Accessory</option>
+                  </select>
+                </div>
+
+                <div class="mb-3">
+                  <label for="create-item-weather-slider">Weather</label>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="create-item-weather-slider">
+                    <div class="slider-with-labels">
+                      <i class="fas fa-sun disabled"></i>
+                      <input type="range" class="form-range" id="" disabled>
+                      <i class="fas fa-snowflake disabled"></i>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="create-item-formality-slider">Formality</label>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="create-item-formality-slider">
+                    <div class="slider-with-labels">
+                      <i class="fas fa-tshirt disabled"></i>
+                      <input type="range" class="form-range" id="" disabled>
+                      <i class="fas fa-crown disabled"></i>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="create-item-comfort-slider">Comfort</label>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="create-item-comfort-slider">
+                    <div class="slider-with-labels">
+                      <i class="fas fa-sheep disabled"></i>
+                      <input type="range" class="form-range" id="" disabled>
+                      <i class="fas fa-band-aid disabled"></i>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="">Tones</label>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="create-item-tones-warm">
+                    <label class="form-check-label" for="create-item-tones-warm">Warm</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="create-item-tones-cool">
+                    <label class="form-check-label" for="create-item-tones-cool">Cool</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="create-item-tones-muted">
+                    <label class="form-check-label" for="create-item-tones-muted">Muted</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="create-item-tones-bright">
+                    <label class="form-check-label" for="create-item-tones-bright">Bright</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="create-item-tones-grayscale">
+                    <label class="form-check-label" for="create-item-tones-grayscale">Grayscale</label>
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="">Has Pockets</label>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="create-item-haspockets-yes">
+                    <label class="form-check-label" for="create-item-haspockets-yes">Yes</label>
+                  </div>
+                </div>
+
+                <button type="submit" class="primary full-width">Create Item</button>
+                <button class="link full-width">Cancel</button>
+              </form>
+            </div>
+          </div>
+
+
+
+        </div>
+
+      </section>
+
+    <!-- ITEM DETAIL -->
+
+      <section class="item-detail">
+        <div class="container">
+          <h1>[Item Name]</h1>
+          <div class="row">
+
+            <div class="col-md-3 col-sm-12">
+              <img src="https://picsum.photos/seed/picsum/300/300" alt="">
+              <button class="primary full-width">Add to Outfit</button>
+            </div>
+
+            <div class="col-md-9 col-sm-12">
+              <form>
+
+                <div class="mb-3">
+                  <div class="read label">Type</div>
+                  <div class="read input">Top/Bottom/Jacket/Shoes/Accessory</div>
+                </div>
+
+                <div class="mb-3">
+                  <div class="read label">Weather</div>
+                  <div class="read input slider-with-labels">
+                    <i class="fas fa-sun disabled"></i>
+                    <input type="range" class="form-range" id="" >
+                    <i class="fas fa-snowflake disabled"></i>
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <div class="read label">Formality</div>
+                  <div class="read input slider-with-labels">
+                    <i class="fas fa-tshirt disabled"></i>
+                    <input type="range" class="form-range" id="" >
+                    <i class="fas fa-crown disabled"></i>
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <div class="read label">Comfort</div>
+                  <div class="read input slider-with-labels">
+                    <i class="fas fa-sheep disabled"></i>
+                    <input type="range" class="form-range" id="" >
+                    <i class="fas fa-band-aid disabled"></i>
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <div class="read label">Tones</div>
+                  <div class="read input">Warm, Cool, Muted, Bright, Grayscale</div>
+                </div>
+
+                <div class="mb-3">
+                  <div class="read label">Has Pockets</div>
+                  <div class="read input">Yes</div>
+                </div>
+
+
+
+              </form>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+    <!-- OUTFIT INDEX -->
+
+      <section class="outfit-index">
+
+        <div class="container">
+
+          <h1>Search Outfits</h1>
+
+          <div class="search-with-button">
+            <input type="text" class="search" id="search-outfits" name="search-outfits" placeholder="Search..."
+              aria-label="Search outfits">
+            <button type="button" class="primary"><i class="fas fa-plus"></i> New</button>
+          </div>
+
+          <!-- Filters -->
+
+          <div class="filters">
+
+            <div class="dropdown">
+              <button class="btn filter dropdown-toggle" type="button" id="filter-outfit-weather" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Weather
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="">
+                <li class="slider-filter">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="filter-outfit-weather-slider">
+                    <div class="slider-with-labels">
+                      <i class="fas fa-sun disabled"></i>
+                      <input type="range" class="form-range" id="" disabled>
+                      <i class="fas fa-snowflake disabled"></i>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="dropdown">
+              <button class="btn filter dropdown-toggle" type="button" id="filter-outfit-formality" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Formality
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="">
+                <li class="slider-filter">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="filter-outfit-formality-slider">
+                    <div class="slider-with-labels">
+                      <i class="fas fa-tshirt disabled"></i>
+                      <input type="range" class="form-range" id="" disabled>
+                      <i class="fas fa-crown disabled"></i>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="dropdown">
+              <button class="btn filter dropdown-toggle" type="button" id="filter-outfit-comfort" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Comfort
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li class="slider-filter">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="filter-outfit-comfort-slider">
+                    <div class="slider-with-labels">
+                      <i class="fas fa-sheep disabled"></i>
+                      <input type="range" class="form-range" id="" disabled>
+                      <i class="fas fa-band-aid disabled"></i>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="dropdown">
+              <button class="btn filter dropdown-toggle" type="button" id="filter-outfit-tones" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Tones
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+
+                <li>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="filter-outfit-tones-warm">
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Warm
+                    </label>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="filter-outfit-tones-cool">
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Cool
+                    </label>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="filter-outfit-tones-muted">
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Muted
+                    </label>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="filter-outfit-tones-bright">
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Bright
+                    </label>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="filter-outfit-tones-grayscale">
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Grayscale
+                    </label>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="dropdown">
+              <button class="btn filter dropdown-toggle" type="button" id="filter-outfit-pockets" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Pockets
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+
+                <li>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="filter-outfit-pockets-haspockets">
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Has Pockets
+                    </label>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <button type="button" class="link clear-filters"><i class="fas fa-times"></i>Clear Filters</button>
+
+          </div>
+
+          <!-- Cards -->
+
+          <div class="card-deck">
+
+            <div class="item-card col-xs-12 col-s-6 col-md-4 col-lg-3 col-xl-2">
+              <img class="cover-img" src="https://picsum.photos/300/150?random=1" alt="">
+              <h3>[Item Name]</h3>
+              <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                        aliqua.</p> -->
+            </div>
+
+            <div class="item-card col-xs-12 col-s-6 col-md-4 col-lg-3 col-xl-2">
+              <img class="cover-img" src="https://picsum.photos/300/150?random=2" alt="">
+              <h3>[Item Name]</h3>
+              <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                          aliqua.</p> -->
+            </div>
+
+            <div class="item-card col-xs-12 col-s-6 col-md-4 col-lg-3 col-xl-2">
+              <img class="cover-img" src="https://picsum.photos/300/150?random=3" alt="">
+              <h3>[Item Name]</h3>
+              <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                          aliqua.</p> -->
+            </div>
+
+            <div class="item-card col-xs-12 col-s-6 col-md-4 col-lg-3 col-xl-2">
+              <img class="cover-img" src="https://picsum.photos/300/150?random=4" alt="">
+              <h3>[Item Name]</h3>
+              <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                          aliqua.</p> -->
+            </div>
+
+            <div class="item-card col-xs-12 col-s-6 col-md-4 col-lg-3 col-xl-2">
+              <img class="cover-img" src="https://picsum.photos/300/150?random=5" alt="">
+              <h3>[Item Name]</h3>
+              <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                          aliqua.</p> -->
+            </div>
+
+            <div class="item-card col-xs-12 col-s-6 col-md-4 col-lg-3 col-xl-2">
+              <img class="cover-img" src="https://picsum.photos/300/150?random=6" alt="">
+              <h3>[Item Name]</h3>
+              <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                          aliqua.</p> -->
+            </div>
+
+            <div class="item-card col-xs-12 col-s-6 col-md-4 col-lg-3 col-xl-2">
+              <img class="cover-img" src="https://picsum.photos/300/150?random=7" alt="">
+              <h3>[Item Name]</h3>
+              <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                          aliqua.</p> -->
+            </div>
+
+            <div class="item-card col-xs-12 col-s-6 col-md-4 col-lg-3 col-xl-2">
+              <img class="cover-img" src="https://picsum.photos/300/150?random=8" alt="">
+              <h3>[Item Name]</h3>
+              <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                          aliqua.</p> -->
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+    <!-- OUTFIT DETAIL -->
+
+      <section class="outfit-detail">
+        <div class="container">
+          <h1>[Outfit Name]</h1>
+        </div>
+
+      </section>
+
+    <!-- HISTORY -->
+
+      <section class="history">
+        <div class="container">
+          <h1>History</h1>
+        </div>
+
+      </section>
+
+    <!-- ANALYTICS -->
+
+      <section class="analytics">
+        <div class="container">
+          <h1>Analytics</h1>
+        </div>
+
+      </section>
+
   </main>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
   <script src="js/data.js"></script>
   <script src="js/main.js"></script>
 </body>
