@@ -20,7 +20,7 @@
         <div class="nav-item inactive search-outfits">Search Outfits</div>
         <div class="nav-item inactive history">History</div>
         <div class="nav-item inactive analytics">Analytics</div> -->
-        <div class="nav-item inactive hamburger"><i class="fas fa-bars"></i></div>
+        <!-- <div class="nav-item inactive hamburger"><i class="fas fa-bars"></i></div> -->
       </div>
     </div>
   </header>
@@ -128,7 +128,7 @@
           <div class="index-top">
             <input type="text" class="search" id="search-items" name="search-items" placeholder="Search..."
               aria-label="Search wardrobe items">
-            <button type="button" class="primary"><i class="fas fa-plus"></i>New</button>
+            <button type="button" class="primary" id="new-item"><i class="fas fa-plus"></i>New</button>
           </div>
 
           <!-- Filters -->
@@ -306,59 +306,131 @@
           <div class="card-deck">
 
             <div class="item-card">
-              <img class="cover-img" src="https://picsum.photos/150/150?random=1" alt="">
-              <h3>[Item Name]</h3>
-              <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-              aliqua.</p> -->
+              <div class="cover-img">
+                <button type="button" class="outline cover-img-hover"><i class="fas fa-plus"></i></button>
+                <img class="cover-img" src="https://picsum.photos/150/150?random=1" alt="">
+              </div>
+              <h5>[Item Name]</h5>
+              <div class="card-metadata">
+                <p class="card-meta-data-type">Type</p>
+                <p class="card-meta-data-weather">Weather</p>
+                <p class="card-meta-data-formality">Formality</p>
+                <p class="card-meta-data-tone">Tone</p>
+                <p class="card-meta-data-tone">Tone</p>
+                <p class="card-meta-data-pockets">Pockets</p>
+              </div>
             </div>
 
             <div class="item-card">
-              <img class="cover-img" src="https://picsum.photos/150/150?random=2" alt="">
-              <h3>[Item Name]</h3>
-              <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                aliqua.</p> -->
+              <div class="cover-img">
+                <button type="button" class="outline cover-img-hover"><i class="fas fa-plus"></i></button>
+                <img class="cover-img" src="https://picsum.photos/150/150?random=2" alt="">
+              </div>
+              <h5>[Item Name]</h5>
+              <div class="card-metadata">
+                <p class="card-meta-data-type">Type</p>
+                <p class="card-meta-data-weather">Weather</p>
+                <p class="card-meta-data-formality">Formality</p>
+                <p class="card-meta-data-tone">Tone</p>
+                <p class="card-meta-data-tone">Tone</p>
+                <p class="card-meta-data-pockets">Pockets</p>
+              </div>
             </div>
 
             <div class="item-card">
-              <img class="cover-img" src="https://picsum.photos/150/150?random=3" alt="">
-              <h3>[Item Name]</h3>
-              <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                aliqua.</p> -->
+              <div class="cover-img">
+                <button type="button" class="outline cover-img-hover"><i class="fas fa-plus"></i></button>
+                <img class="cover-img" src="https://picsum.photos/150/150?random=3" alt="">
+              </div>
+              <h5>[Item Name]</h5>
+              <div class="card-metadata">
+                <p class="card-meta-data-type">Type</p>
+                <p class="card-meta-data-weather">Weather</p>
+                <p class="card-meta-data-formality">Formality</p>
+                <p class="card-meta-data-tone">Tone</p>
+                <p class="card-meta-data-tone">Tone</p>
+                <p class="card-meta-data-pockets">Pockets</p>
+              </div>
             </div>
 
             <div class="item-card">
-              <img class="cover-img" src="https://picsum.photos/150/150?random=4" alt="">
-              <h3>[Item Name]</h3>
-              <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                aliqua.</p> -->
+              <div class="cover-img">
+                <button type="button" class="outline cover-img-hover"><i class="fas fa-plus"></i></button>
+                <img class="cover-img" src="https://picsum.photos/150/150?random=4" alt="">
+              </div>
+              <h5>[Item Name]</h5>
+              <div class="card-metadata">
+                <p class="card-meta-data-type">Type</p>
+                <p class="card-meta-data-weather">Weather</p>
+                <p class="card-meta-data-formality">Formality</p>
+                <p class="card-meta-data-tone">Tone</p>
+                <p class="card-meta-data-tone">Tone</p>
+                <p class="card-meta-data-pockets">Pockets</p>
+              </div>
             </div>
 
             <div class="item-card">
-              <img class="cover-img" src="https://picsum.photos/150/150?random=5" alt="">
-              <h3>[Item Name]</h3>
-              <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                aliqua.</p> -->
+              <div class="cover-img">
+                <button type="button" class="outline cover-img-hover"><i class="fas fa-plus"></i></button>
+                <img class="cover-img" src="https://picsum.photos/150/150?random=5" alt="">
+              </div>
+              <h5>[Item Name]</h5>
+              <div class="card-metadata">
+                <p class="card-meta-data-type">Type</p>
+                <p class="card-meta-data-weather">Weather</p>
+                <p class="card-meta-data-formality">Formality</p>
+                <p class="card-meta-data-tone">Tone</p>
+                <p class="card-meta-data-tone">Tone</p>
+                <p class="card-meta-data-pockets">Pockets</p>
+              </div>
             </div>
 
             <div class="item-card">
-              <img class="cover-img" src="https://picsum.photos/150/150?random=6" alt="">
-              <h3>[Item Name]</h3>
-              <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                aliqua.</p> -->
+              <div class="cover-img">
+                <button type="button" class="outline cover-img-hover"><i class="fas fa-plus"></i></button>
+                <img class="cover-img" src="https://picsum.photos/150/150?random=6" alt="">
+              </div>
+              <h5>[Item Name]</h5>
+              <div class="card-metadata">
+                <p class="card-meta-data-type">Type</p>
+                <p class="card-meta-data-weather">Weather</p>
+                <p class="card-meta-data-formality">Formality</p>
+                <p class="card-meta-data-tone">Tone</p>
+                <p class="card-meta-data-tone">Tone</p>
+                <p class="card-meta-data-pockets">Pockets</p>
+              </div>
             </div>
 
             <div class="item-card">
-              <img class="cover-img" src="https://picsum.photos/150/150?random=7" alt="">
-              <h3>[Item Name]</h3>
-              <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                aliqua.</p> -->
+              <div class="cover-img">
+                <button type="button" class="outline cover-img-hover"><i class="fas fa-plus"></i></button>
+                <img class="cover-img" src="https://picsum.photos/150/150?random=7" alt="">
+              </div>
+              <h5>[Item Name]</h5>
+              <div class="card-metadata">
+                <p class="card-meta-data-type">Type</p>
+                <p class="card-meta-data-weather">Weather</p>
+                <p class="card-meta-data-formality">Formality</p>
+                <p class="card-meta-data-tone">Tone</p>
+                <p class="card-meta-data-tone">Tone</p>
+                <p class="card-meta-data-pockets">Pockets</p>
+              </div>
             </div>
 
             <div class="item-card">
-              <img class="cover-img" src="https://picsum.photos/150/150?random=8" alt="">
-              <h3>[Item Name]</h3>
-              <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                aliqua.</p> -->
+              <div class="cover-img">
+                <button type="button" class="outline cover-img-hover"><i class="fas fa-plus"></i></button>
+                <img class="cover-img" src="https://picsum.photos/150/150?random=8" alt="">
+              </div>
+              <h5>[Item Name]</h5>
+              <div class="card-metadata">
+                <p class="card-meta-data-type">Type</p>
+                <p class="card-meta-data-weather">Weather</p>
+                <p class="card-meta-data-formality">Formality</p>
+                <p class="card-meta-data-tone">Tone</p>
+                <p class="card-meta-data-tone">Tone</p>
+                <p class="card-meta-data-pockets">Pockets</p>
+              </div>
             </div>
 
           </div>
@@ -369,7 +441,7 @@
     <!-- ITEM CREATE
         ======================================================================================-->
 
-      <section class="item-create hidden">
+      <section class="item-create">
         <div class="container">
           <h1>New Item</h1>
           <div class="row">
@@ -377,9 +449,12 @@
             <div class="col-md-3 col-sm-12">
               <img src="https://picsum.photos/seed/picsum/300/300" alt="">
               <button class="outline full-width"><i class="fas fa-upload"></i> Upload</button>
+              <div class="mobile-spacer"></div>
             </div>
 
-            <div class="col-md-9 col-sm-12">
+            <div class="col-md-1 col-sm-0"></div>
+
+            <div class="col-md-8 col-sm-12">
               <form>
 
                 <div class="form-item">
@@ -474,7 +549,7 @@
     <!-- ITEM DETAIL
         ======================================================================================-->
 
-      <section class="item-detail hidden">
+      <section class="item-detail">
         <div class="container">
           <h1>[Item Name]</h1>
           <div class="row">
@@ -482,9 +557,12 @@
             <div class="col-md-3 col-sm-12">
               <img src="https://picsum.photos/seed/picsum/300/300" alt="">
               <button class="primary full-width">Add to Outfit</button>
+              <div class="mobile-spacer"></div>
             </div>
 
-            <div class="col-md-9 col-sm-12">
+            <div class="col-md-1 col-sm-0"></div>
+
+            <div class="col-md-8 col-sm-12">
               <form>
 
                 <div class="form-item read-only">
@@ -549,11 +627,40 @@
     <!-- OUTFIT INDEX
         ======================================================================================-->
 
-      <section class="outfit-index hidden">
+      <section class="outfit-index">
 
         <div class="container">
 
           <h1>Search Outfits</h1>
+
+          <div class="card-deck">
+
+            <div class="outfit-card">
+              <div class="cover-img">
+                <button type="button" class="outline cover-img-hover"><i class="fas fa-plus"></i></button>
+                <div class="cover-img-collage">
+                  <div class="row">
+                    <img class="cover-img col" src="https://picsum.photos/150/150?random=1" alt="">
+                    <img class="cover-img col" src="https://picsum.photos/150/150?random=2" alt="">
+                  </div>
+                  <div class="row">
+                    <img class="cover-img col" src="https://picsum.photos/150/150?random=3" alt="">
+                    <img class="cover-img col" src="https://picsum.photos/150/150?random=4" alt="">
+                  </div>
+                </div>
+              </div>
+              <h5>[Outfit Name]</h5>
+              <div class="card-metadata">
+                <p class="card-meta-data-type">Type</p>
+                <p class="card-meta-data-weather">Weather</p>
+                <p class="card-meta-data-formality">Formality</p>
+                <p class="card-meta-data-tone">Tone</p>
+                <p class="card-meta-data-tone">Tone</p>
+                <p class="card-meta-data-pockets">Pockets</p>
+              </div>
+            </div>
+
+          </div>
 
         </div>
 

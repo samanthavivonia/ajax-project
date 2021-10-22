@@ -23,6 +23,17 @@ h1 {
   margin-bottom: 0.5rem;
 }
 
+.mobile-spacer {
+  height: 2rem;
+}
+
+img {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  border-radius: 5%;
+}
+
 /* HEADER & NAV STYLES
 ============================================================================ */
 
@@ -56,6 +67,7 @@ header {
 .logo {
   font-size: 1.2em;
   font-weight: 700;
+  cursor: pointer;
 }
 
 /* BUTTON STYLES
@@ -113,8 +125,12 @@ button.link:hover {
 /* FORM INPUT STYLES
 ============================================================================ */
 
+form {
+  max-width: 25rem;
+}
+
 .form-item {
-  margin: 2rem 0;
+  margin-bottom: 2rem;
 }
 
 label {
@@ -482,17 +498,53 @@ div.dropdown {
 ============================================================================ */
 
 .card-deck {
+  display: grid;
+  gap: 1rem 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
+}
+
+.item-card,
+.outfit-card {
+  flex-grow: 1;
+  border-radius: 5%;
+}
+
+.outfit-card .cover-img-collage {
+  display: flex;
+  gap: 0.2rem;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+}
+
+.outfit-card .cover-img-collage .row {
+  display: flex;
+  gap: 0.2rem;
+}
+
+.card-metadata {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px 20px;
+  gap: 0.1rem 0.2rem;
 }
 
-.item-card {
-  flex-grow: 1;
+.card-metadata p {
+  font-size: 0.8rem;
+  color: #929090;
+  margin: 0;
 }
 
-img {
-  width: 100%;
-  border-radius: 7px;
-  margin-bottom: 0.5rem;
+.cover-img button {
+  position: absolute;
+  margin: 0.2rem;
+  visibility: hidden;
+}
+
+.item-card:hover {
+  border: 1px solid #b2b2b2;
+  background-color: #f7fdfb;
+  padding: 0.2rem;
+}
+
+.item-card:hover button {
+  visibility: inherit;
 }
