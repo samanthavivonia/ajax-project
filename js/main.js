@@ -9,30 +9,39 @@ var $sectionHistory = document.querySelector('section.history');
 var $sectionAnalytics = document.querySelector('section.analytics');
 
 function navTo(page) {
-  $sectionItemIndex.classList.add('.hidden');
-  $sectionItemCreate.classList.add('.hidden');
-  $sectionItemDetail.classList.add('.hidden');
-  $sectionOutfitIndex.classList.add('.hidden');
-  $sectionOutfitDetail.classList.add('.hidden');
-  $sectionHistory.classList.add('.hidden');
-  $sectionAnalytics.classList.add('.hidden');
+  $sectionItemIndex.classList.add('hidden');
+  $sectionItemCreate.classList.add('hidden');
+  $sectionItemDetail.classList.add('hidden');
+  $sectionOutfitIndex.classList.add('hidden');
+  $sectionOutfitDetail.classList.add('hidden');
+  $sectionHistory.classList.add('hidden');
+  $sectionAnalytics.classList.add('hidden');
 
   if (page === 'itemIndex') {
-    $sectionItemIndex.classList.remove('.hidden');
+    $sectionItemIndex.classList.remove('hidden');
   } else if (page === 'itemCreate') {
-    $sectionItemCreate.classList.remove('.hidden');
+    $sectionItemCreate.classList.remove('hidden');
   } else if (page === 'itemDetail') {
-    $sectionItemDetail.classList.remove('.hidden');
+    $sectionItemDetail.classList.remove('hidden');
   } else if (page === 'outfitIndex') {
-    $sectionOutfitIndex.classList.remove('.hidden');
+    $sectionOutfitIndex.classList.remove('hidden');
   } else if (page === 'outfitDetail') {
-    $sectionOutfitDetail.classList.remove('.hidden');
+    $sectionOutfitDetail.classList.remove('hidden');
   } else if (page === 'history') {
-    $sectionHistory.classList.remove('.hidden');
+    $sectionHistory.classList.remove('hidden');
   } else if (page === 'analytics') {
-    $sectionAnalytics.classList.remove('.hidden');
+    $sectionAnalytics.classList.remove('hidden');
   }
 }
 
 var $newItemButton = document.querySelector('#new-item');
-$newItemButton.addEventListener('click', navTo('itemCreate'));
+$newItemButton.addEventListener('click', function () {
+  // console.log('navTo: itemCreate');
+  navTo('itemCreate');
+});
+
+var $itemCreateCancelButton = document.querySelector('#item-create-cancel');
+$itemCreateCancelButton.addEventListener('click', function () {
+  // console.log('navTo: itemIndex');
+  navTo('itemIndex');
+});
