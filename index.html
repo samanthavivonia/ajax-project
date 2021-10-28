@@ -301,11 +301,17 @@
 
           </div>
 
+          <!-- Empty State -->
+
+          <div class="empty-state">
+            No wardrobe items yet...
+          </div>
+
           <!-- Cards -->
 
           <div class="card-deck">
 
-            <div class="item-card">
+            <div class="item-card hidden">
               <div class="cover-img">
                 <button type="button" class="outline cover-img-hover"><i class="fas fa-plus"></i></button>
                 <img class="cover-img" src="https://picsum.photos/150/150?random=1" alt="">
@@ -321,7 +327,7 @@
               </div>
             </div>
 
-            <div class="item-card">
+            <div class="item-card hidden">
               <div class="cover-img">
                 <button type="button" class="outline cover-img-hover"><i class="fas fa-plus"></i></button>
                 <img class="cover-img" src="https://picsum.photos/150/150?random=2" alt="">
@@ -337,7 +343,7 @@
               </div>
             </div>
 
-            <div class="item-card">
+            <div class="item-card hidden">
               <div class="cover-img">
                 <button type="button" class="outline cover-img-hover"><i class="fas fa-plus"></i></button>
                 <img class="cover-img" src="https://picsum.photos/150/150?random=3" alt="">
@@ -353,7 +359,7 @@
               </div>
             </div>
 
-            <div class="item-card">
+            <div class="item-card hidden">
               <div class="cover-img">
                 <button type="button" class="outline cover-img-hover"><i class="fas fa-plus"></i></button>
                 <img class="cover-img" src="https://picsum.photos/150/150?random=4" alt="">
@@ -369,7 +375,7 @@
               </div>
             </div>
 
-            <div class="item-card">
+            <div class="item-card hidden">
               <div class="cover-img">
                 <button type="button" class="outline cover-img-hover"><i class="fas fa-plus"></i></button>
                 <img class="cover-img" src="https://picsum.photos/150/150?random=5" alt="">
@@ -385,7 +391,7 @@
               </div>
             </div>
 
-            <div class="item-card">
+            <div class="item-card hidden">
               <div class="cover-img">
                 <button type="button" class="outline cover-img-hover"><i class="fas fa-plus"></i></button>
                 <img class="cover-img" src="https://picsum.photos/150/150?random=6" alt="">
@@ -401,7 +407,7 @@
               </div>
             </div>
 
-            <div class="item-card">
+            <div class="item-card hidden">
               <div class="cover-img">
                 <button type="button" class="outline cover-img-hover"><i class="fas fa-plus"></i></button>
                 <img class="cover-img" src="https://picsum.photos/150/150?random=7" alt="">
@@ -417,7 +423,7 @@
               </div>
             </div>
 
-            <div class="item-card">
+            <div class="item-card hidden">
               <div class="cover-img">
                 <button type="button" class="outline cover-img-hover"><i class="fas fa-plus"></i></button>
                 <img class="cover-img" src="https://picsum.photos/150/150?random=8" alt="">
@@ -455,7 +461,7 @@
             <div class="col-md-1 col-sm-0"></div>
 
             <div class="col-md-8 col-sm-12">
-              <form>
+              <form id="form-create-item">
 
                 <div class="form-item">
                   <label for="create-item-name">Item Name:</label>
@@ -536,7 +542,7 @@
                   </div>
                 </div>
 
-                <button type="submit" class="primary full-width">Create Item</button>
+                <button type="submit" class="primary full-width" id="submit-button">Create Item</button>
                 <button class="link full-width" id="item-create-cancel">Cancel</button>
               </form>
             </div>

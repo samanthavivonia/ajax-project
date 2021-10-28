@@ -39,6 +39,10 @@ img {
   margin-bottom: 0.5rem;
 }
 
+div .empty-state {
+  color: #929090;
+}
+
 /* HEADER & NAV STYLES
 ============================================================================ */
 
@@ -131,7 +135,7 @@ button.link:hover {
 ============================================================================ */
 
 form {
-  max-width: 25rem;
+  max-width: 35rem;
 }
 
 .form-item {
@@ -438,7 +442,6 @@ div .read-only-slider .slider-track {
   gap: 5px;
   align-items: center;
   width: 100%;
-  overflow: auto;
 }
 
 .filters::-webkit-scrollbar {
