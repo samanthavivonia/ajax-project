@@ -189,9 +189,9 @@
               <ul class="dropdown-menu">
                 <li class="slider-filter">
                   <div class="checkbox slider">
-                    <input type="checkbox" class="form-check-input">
+                    <input type="checkbox" class="form-check-input" id="filter-items-weather-checkbox">
                     <i class="fas fa-sun"></i>
-                    <input type="range" class="form-range" min="1" max="5" id="">
+                    <input type="range" class="form-range" min="1" max="5" id="filter-items-weather-slider" disabled>
                     <i class="fas fa-snowflake"></i>
                   </div>
                 </li>
@@ -207,9 +207,9 @@
               <ul class="dropdown-menu">
                 <li class="slider-filter">
                   <div class="checkbox slider">
-                    <input type="checkbox" class="form-check-input">
+                    <input type="checkbox" class="form-check-input" id="filter-items-formality-checkbox">
                     <i class="fas fa-tshirt"></i>
-                    <input type="range" class="form-range" min="1" max="5" id="">
+                    <input type="range" class="form-range" min="1" max="5" id="filter-items-formality-slider" disabled>
                     <i class="fas fa-crown"></i>
                   </div>
                 </li>
@@ -225,9 +225,9 @@
               <ul class="dropdown-menu">
                 <li class="slider-filter">
                   <div class="checkbox slider">
-                    <input type="checkbox" class="form-check-input">
+                    <input type="checkbox" class="form-check-input" id="filter-items-comfort-checkbox">
                     <i class="fas fa-sheep"></i>
-                    <input type="range" class="form-range" min="1" max="5" id="">
+                    <input type="range" class="form-range" min="1" max="5" id="filter-items-comfort-slider" disabled>
                     <i class="fas fa-band-aid"></i>
                   </div>
                 </li>
@@ -301,14 +301,22 @@
 
           </div>
 
+          <!-- Empty State -->
+
+          <div class="empty-state">
+            No wardrobe items yet...
+          </div>
+
           <!-- Cards -->
 
           <div class="card-deck">
 
-            <div class="item-card">
+            <!-- <div class="item-card">
               <div class="cover-img">
                 <button type="button" class="outline cover-img-hover"><i class="fas fa-plus"></i></button>
-                <img class="cover-img" src="https://picsum.photos/150/150?random=1" alt="">
+                <div class="cover-img-container">
+                  <img class="cover-img" src="https://picsum.photos/150/400?random=1" alt="">
+                </div>
               </div>
               <h5>[Item Name]</h5>
               <div class="card-metadata">
@@ -319,119 +327,7 @@
                 <p class="card-meta-data-tone">Tone</p>
                 <p class="card-meta-data-pockets">Pockets</p>
               </div>
-            </div>
-
-            <div class="item-card">
-              <div class="cover-img">
-                <button type="button" class="outline cover-img-hover"><i class="fas fa-plus"></i></button>
-                <img class="cover-img" src="https://picsum.photos/150/150?random=2" alt="">
-              </div>
-              <h5>[Item Name]</h5>
-              <div class="card-metadata">
-                <p class="card-meta-data-type">Type</p>
-                <p class="card-meta-data-weather">Weather</p>
-                <p class="card-meta-data-formality">Formality</p>
-                <p class="card-meta-data-tone">Tone</p>
-                <p class="card-meta-data-tone">Tone</p>
-                <p class="card-meta-data-pockets">Pockets</p>
-              </div>
-            </div>
-
-            <div class="item-card">
-              <div class="cover-img">
-                <button type="button" class="outline cover-img-hover"><i class="fas fa-plus"></i></button>
-                <img class="cover-img" src="https://picsum.photos/150/150?random=3" alt="">
-              </div>
-              <h5>[Item Name]</h5>
-              <div class="card-metadata">
-                <p class="card-meta-data-type">Type</p>
-                <p class="card-meta-data-weather">Weather</p>
-                <p class="card-meta-data-formality">Formality</p>
-                <p class="card-meta-data-tone">Tone</p>
-                <p class="card-meta-data-tone">Tone</p>
-                <p class="card-meta-data-pockets">Pockets</p>
-              </div>
-            </div>
-
-            <div class="item-card">
-              <div class="cover-img">
-                <button type="button" class="outline cover-img-hover"><i class="fas fa-plus"></i></button>
-                <img class="cover-img" src="https://picsum.photos/150/150?random=4" alt="">
-              </div>
-              <h5>[Item Name]</h5>
-              <div class="card-metadata">
-                <p class="card-meta-data-type">Type</p>
-                <p class="card-meta-data-weather">Weather</p>
-                <p class="card-meta-data-formality">Formality</p>
-                <p class="card-meta-data-tone">Tone</p>
-                <p class="card-meta-data-tone">Tone</p>
-                <p class="card-meta-data-pockets">Pockets</p>
-              </div>
-            </div>
-
-            <div class="item-card">
-              <div class="cover-img">
-                <button type="button" class="outline cover-img-hover"><i class="fas fa-plus"></i></button>
-                <img class="cover-img" src="https://picsum.photos/150/150?random=5" alt="">
-              </div>
-              <h5>[Item Name]</h5>
-              <div class="card-metadata">
-                <p class="card-meta-data-type">Type</p>
-                <p class="card-meta-data-weather">Weather</p>
-                <p class="card-meta-data-formality">Formality</p>
-                <p class="card-meta-data-tone">Tone</p>
-                <p class="card-meta-data-tone">Tone</p>
-                <p class="card-meta-data-pockets">Pockets</p>
-              </div>
-            </div>
-
-            <div class="item-card">
-              <div class="cover-img">
-                <button type="button" class="outline cover-img-hover"><i class="fas fa-plus"></i></button>
-                <img class="cover-img" src="https://picsum.photos/150/150?random=6" alt="">
-              </div>
-              <h5>[Item Name]</h5>
-              <div class="card-metadata">
-                <p class="card-meta-data-type">Type</p>
-                <p class="card-meta-data-weather">Weather</p>
-                <p class="card-meta-data-formality">Formality</p>
-                <p class="card-meta-data-tone">Tone</p>
-                <p class="card-meta-data-tone">Tone</p>
-                <p class="card-meta-data-pockets">Pockets</p>
-              </div>
-            </div>
-
-            <div class="item-card">
-              <div class="cover-img">
-                <button type="button" class="outline cover-img-hover"><i class="fas fa-plus"></i></button>
-                <img class="cover-img" src="https://picsum.photos/150/150?random=7" alt="">
-              </div>
-              <h5>[Item Name]</h5>
-              <div class="card-metadata">
-                <p class="card-meta-data-type">Type</p>
-                <p class="card-meta-data-weather">Weather</p>
-                <p class="card-meta-data-formality">Formality</p>
-                <p class="card-meta-data-tone">Tone</p>
-                <p class="card-meta-data-tone">Tone</p>
-                <p class="card-meta-data-pockets">Pockets</p>
-              </div>
-            </div>
-
-            <div class="item-card">
-              <div class="cover-img">
-                <button type="button" class="outline cover-img-hover"><i class="fas fa-plus"></i></button>
-                <img class="cover-img" src="https://picsum.photos/150/150?random=8" alt="">
-              </div>
-              <h5>[Item Name]</h5>
-              <div class="card-metadata">
-                <p class="card-meta-data-type">Type</p>
-                <p class="card-meta-data-weather">Weather</p>
-                <p class="card-meta-data-formality">Formality</p>
-                <p class="card-meta-data-tone">Tone</p>
-                <p class="card-meta-data-tone">Tone</p>
-                <p class="card-meta-data-pockets">Pockets</p>
-              </div>
-            </div>
+            </div> -->
 
           </div>
 
@@ -447,27 +343,35 @@
           <div class="row">
 
             <div class="col-md-3 col-sm-12">
-              <img src="https://sherwin.scene7.com/is/image/sw/color-swatch?_tparam_size=250,250&layer=comp&_tparam_color=C6CACA" alt="">
-              <button class="outline full-width"><i class="fas fa-upload"></i> Upload</button>
+              <div>
+                <img src="https://sherwin.scene7.com/is/image/sw/color-swatch?_tparam_size=250,250&layer=comp&_tparam_color=C6CACA"
+                  alt="">
+              </div>
+
+              <div class="form-item">
+                <input type="text" id="create-item-img-url" name="create-item-img-url" placeholder="Paste Image URL...">
+              </div>
+              <!-- <button class="outline full-width"><i class="fas fa-upload"></i> Upload</button> -->
               <div class="mobile-spacer"></div>
             </div>
 
             <div class="col-md-1 col-sm-0"></div>
 
             <div class="col-md-8 col-sm-12">
-              <form>
+              <form id="form-create-item">
 
                 <div class="form-item">
                   <label for="create-item-name">Item Name:</label>
-                  <input type="text" id="create-item-name" name="create-item-name" placeholder="Item Name...">
+                  <input type="text" id="create-item-name" name="create-item-name" placeholder="Item Name..." required>
                 </div>
 
                 <div class="form-item">
                   <label for="create-item-type">Type:</label>
-                  <select name="create-item-type" id="create-item-type">
+                  <select name="create-item-type" id="create-item-type" required>
                     <option selected disabled>Choose item type...</option>
                     <option value="top">Top</option>
                     <option value="bottom">Bottom</option>
+                    <option value="one-piece">One-Piece</option>
                     <option value="jacket">Jacket</option>
                     <option value="shoes">Shoes</option>
                     <option value="accessory">Accessory</option>
@@ -479,7 +383,7 @@
                   <div class="checkbox slider">
                     <input type="checkbox" class="form-check-input" id="create-item-weather-checkbox">
                     <i class="fas fa-sun"></i>
-                    <input type="range" id="create-item-weather-slider" class="form-range" min="1" max="5">
+                    <input type="range" id="create-item-weather-slider" class="form-range" min="1" max="5" disabled>
                     <i class="fas fa-snowflake"></i>
                   </div>
                 </div>
@@ -489,7 +393,7 @@
                   <div class="checkbox slider">
                     <input type="checkbox" class="form-check-input" id="create-item-formality-checkbox">
                     <i class="fas fa-tshirt"></i>
-                    <input type="range" id="create-item-formality-slider" class="form-range" min="1" max="5">
+                    <input type="range" id="create-item-formality-slider" class="form-range" min="1" max="5" disabled>
                     <i class="fas fa-crown"></i>
                   </div>
                 </div>
@@ -499,7 +403,7 @@
                   <div class="checkbox slider">
                     <input type="checkbox" class="form-check-input" id="create-item-comfort-checkbox">
                     <i class="fas fa-sheep"></i>
-                    <input type="range" id="create-item-comfort-slider" class="form-range" min="1" max="5">
+                    <input type="range" id="create-item-comfort-slider" class="form-range" min="1" max="5" disabled>
                     <i class="fas fa-band-aid"></i>
                   </div>
                 </div>
@@ -536,7 +440,7 @@
                   </div>
                 </div>
 
-                <button type="submit" class="primary full-width">Create Item</button>
+                <button type="submit" class="primary full-width" id="submit-button">Create Item</button>
                 <button class="link full-width" id="item-create-cancel">Cancel</button>
               </form>
             </div>
@@ -701,5 +605,7 @@
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
   <script src="js/data.js"></script>
   <script src="js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+  <script src="lodash.js"></script>
 </body>
 </html>

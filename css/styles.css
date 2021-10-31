@@ -31,12 +31,15 @@ img {
   margin: 0;
   padding: 0;
   width: 100%;
-  border-radius: 5%;
 }
 
 .item-create img,
 .item-detail img {
   margin-bottom: 0.5rem;
+}
+
+div .empty-state {
+  color: #929090;
 }
 
 /* HEADER & NAV STYLES
@@ -131,7 +134,7 @@ button.link:hover {
 ============================================================================ */
 
 form {
-  max-width: 25rem;
+  max-width: 35rem;
 }
 
 .form-item {
@@ -438,7 +441,7 @@ div .read-only-slider .slider-track {
   gap: 5px;
   align-items: center;
   width: 100%;
-  overflow: auto;
+  overflow-x: scroll;
 }
 
 .filters::-webkit-scrollbar {
@@ -511,23 +514,34 @@ div.dropdown {
 .item-card,
 .outfit-card {
   flex-grow: 1;
-  border-radius: 5%;
+  border-radius: 0.5rem;
 }
 
-.cover-img {
+.cover-img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 0.2rem;
+  max-height: 10rem;
+  overflow: hidden;
+  border-radius: 0.5rem;
 }
 
 .outfit-card .cover-img-collage {
   display: flex;
   gap: 0.2rem;
-  border-radius: 10px;
+  border-radius: 0.5rem;
   margin-bottom: 0.5rem;
 }
 
 .outfit-card .cover-img-collage .row {
   display: flex;
   gap: 0.2rem;
+}
+
+.item-card h5,
+.outfit-card h5 {
+  margin: 0;
 }
 
 .card-metadata {
